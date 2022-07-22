@@ -12,7 +12,7 @@ namespace Functions;
  *
  * @return array<mixed>
  */
-function flatten(array $array, int $depth = 0): array
+function flatten(array $array, int $depth = 1): array
 {
     $result = [];
 
