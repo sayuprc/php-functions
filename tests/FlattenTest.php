@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use function Functions\flat;
+use function Functions\flatten;
+
 use PHPUnit\Framework\TestCase;
 
 class FlatTest extends TestCase
@@ -19,27 +20,27 @@ class FlatTest extends TestCase
     {
         $input = [1, 2, 3, 4, 5];
         $expected = [1, 2, 3, 4, 5];
-        $actual = flat($input);
+        $actual = flatten($input);
         $this->assertSame($expected, $actual);
 
         $input = [1, 2, 3, [4, [5]]];
         $expected = [1, 2, 3, 4, [5]];
-        $actual = flat($input);
+        $actual = flatten($input);
         $this->assertSame($expected, $actual);
 
         $input = [1, 2, 3, [4, [5]]];
         $expected = [1, 2, 3, 4, 5];
-        $actual = flat($input, 2);
+        $actual = flatten($input, 2);
         $this->assertSame($expected, $actual);
 
         $input = [1, 2, 3, [4, [5]]];
         $expected = [1, 2, 3, 4, [5]];
-        $actual = flat($input, -2);
+        $actual = flatten($input, -2);
         $this->assertSame($expected, $actual);
 
         $input = [1, 2, 3, [4, [5]]];
         $expected = [1, 2, 3, 4, 5];
-        $actual = flat($input, 10);
+        $actual = flatten($input, 10);
         $this->assertSame($expected, $actual);
     }
 }
