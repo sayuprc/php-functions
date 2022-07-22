@@ -12,7 +12,7 @@ namespace Functions;
  *
  * @return array<mixed>
  */
-function flat(array $array, int $depth = 0): array
+function flatten(array $array, int $depth = 0): array
 {
     $result = [];
 
@@ -25,7 +25,7 @@ function flat(array $array, int $depth = 0): array
     }
 
     if (1 < $depth) {
-        $result = flat($result, $depth - 1);
+        $result = flatten($result, $depth - 1);
     }
 
     return $result;

@@ -8,7 +8,7 @@
       "psr-4": {
         "Functions\\": "/src"
       },
-      "files": ["src/Flat.php"]
+      "files": ["src/Flatten.php"]
     },
     "autoload-dev": {
       "psr-4": {
