@@ -18,14 +18,15 @@ function flatten(array $array, int $depth = 1): array
 
     foreach ($array as $item) {
         if (is_array($item)) {
-            $result = [...$result, ...$item];
+            if (1 < $depth) {
+                // 深さが指定されていて、配列がある場合、再帰的に処理する。
+                $result = [...$result, ...flatten($item, $depth - 1)];
+            } else {
+                $result = [...$result, ...$item];
+            }
         } else {
             $result = [...$result, $item];
         }
-    }
-
-    if (1 < $depth) {
-        $result = flatten($result, $depth - 1);
     }
 
     return $result;
