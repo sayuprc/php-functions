@@ -11,12 +11,12 @@ use PHPUnit\Framework\TestCase;
 class FlatTest extends TestCase
 {
     /**
-     * flat関数のテスト
+     * flatten関数のテスト
      * 引数がある場合、再帰的にフラットにする。
      *
      * @return void
      */
-    public function testFlat(): void
+    public function testFlatten(): void
     {
         $input = [1, 2, 3, 4, 5];
         $expected = [1, 2, 3, 4, 5];
