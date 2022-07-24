@@ -1,0 +1,18 @@
+{
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.8",
+        "friendsofphp/php-cs-fixer": "^3.9"
+    },
+    "autoload": {
+      "psr-4": {
+        "Functions\\": "/src"
+      },
+      "files": ["src/Flatten.php"]
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Tests\\": "/tests"
+      }
+    }
+}
