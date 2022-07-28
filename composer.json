@@ -6,7 +6,7 @@
     },
     "autoload": {
       "psr-4": {
-        "Functions\\": "/src"
+        "Utility\\": "/src"
       },
       "files": ["src/Flatten.php"]
     },

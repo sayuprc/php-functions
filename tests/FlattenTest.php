@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use function Functions\flatten;
-
 use PHPUnit\Framework\TestCase;
+
+use function Utility\flatten;
 
 class FlatTest extends TestCase
 {
