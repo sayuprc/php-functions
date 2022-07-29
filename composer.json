@@ -8,10 +8,7 @@
       "psr-4": {
         "Utility\\": "src/"
       },
-      "files": [
-        "src/Flatten.php",
-        "src/NewLineChar.php"
-      ]
+      "files": ["src/Flatten.php"]
     },
     "autoload-dev": {
       "psr-4": {
