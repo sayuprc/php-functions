@@ -6,13 +6,13 @@
     },
     "autoload": {
       "psr-4": {
-        "Functions\\": "/src"
+        "Utility\\": "src/"
       },
       "files": ["src/Flatten.php"]
     },
     "autoload-dev": {
       "psr-4": {
-        "Tests\\": "/tests"
+        "Tests\\": "tests/"
       }
     }
 }

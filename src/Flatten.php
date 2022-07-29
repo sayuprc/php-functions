@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Functions;
+namespace Utility;
 
 /**
  * 配列の要素を指定した深さでフラットにする。
