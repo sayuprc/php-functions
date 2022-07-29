@@ -41,4 +41,16 @@ class Str
     {
         return strtolower(str_replace('-', '_', ltrim(preg_replace('/([A-Z])/', '_\0', $str), '_')));
     }
+
+    /**
+     * 文字列をケバブケースへ変換する。
+     *
+     * @param string $str
+     *
+     * @return string
+     */
+    public static function toKebab(string $str): string
+    {
+        return strtolower(str_replace('_', '-', ltrim(preg_replace('/([A-Z])/', '-\0', $str), '-')));
+    }
 }

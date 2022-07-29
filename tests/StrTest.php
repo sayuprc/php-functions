@@ -65,4 +65,23 @@ class StrTest extends TestCase
         $actual = Str::toSnake('HogeFugaPiyo');
         $this->assertSame($expected, $actual);
     }
+
+    /**
+     * ケバブケースへの変換テスト
+     *
+     * @return void
+     */
+    public function testToKebabTest(): void
+    {
+        $expected = 'hoge-fuga-piyo';
+
+        $actual = Str::toKebab('hoge_fuga_piyo');
+        $this->assertSame($expected, $actual);
+
+        $actual = Str::toKebab('hogeFugaPiyo');
+        $this->assertSame($expected, $actual);
+
+        $actual = Str::toKebab('HogeFugaPiyo');
+        $this->assertSame($expected, $actual);
+    }
 }
