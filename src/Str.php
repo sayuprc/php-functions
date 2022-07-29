@@ -17,4 +17,16 @@ class Str
     {
         return lcfirst(str_replace(' ', '', ucwords(preg_replace('/\_|-/', ' ', $str))));
     }
+
+    /**
+     * ケバブケース、キャメルケースをスネークケースへ変換する。
+     *
+     * @param string $str
+     *
+     * @return string
+     */
+    public static function toSnake(string $str): string
+    {
+        return strtolower(str_replace('-', '_', ltrim(preg_replace('/([A-Z])/', '_\0', $str), '_')));
+    }
 }

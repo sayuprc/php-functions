@@ -27,4 +27,23 @@ class StrTest extends TestCase
         $actual = Str::toCamel('HogeFugaPiyo');
         $this->assertSame($expected, $actual);
     }
+
+    /**
+     * スネークケースへの変換テスト
+     *
+     * @return void
+     */
+    public function testToSnakeTest(): void
+    {
+        $expected = 'hoge_fuga_piyo';
+
+        $actual = Str::toSnake('hoge-fuga-piyo');
+        $this->assertSame($expected, $actual);
+
+        $actual = Str::toSnake('hogeFugaPiyo');
+        $this->assertSame($expected, $actual);
+
+        $actual = Str::toSnake('HogeFugaPiyo');
+        $this->assertSame($expected, $actual);
+    }
 }
