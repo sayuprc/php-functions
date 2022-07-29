@@ -1,0 +1,30 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Tests;
+
+use PHPUnit\Framework\TestCase;
+use Utility\Str;
+
+class StrTest extends TestCase
+{
+    /**
+     * キャメルケースへの変換テスト
+     *
+     * @return void
+     */
+    public function testToCamelTest(): void
+    {
+        $expected = 'hogeFugaPiyo';
+
+        $actual = Str::toCamel('hoge-fuga-piyo');
+        $this->assertSame($expected, $actual);
+
+        $actual = Str::toCamel('hoge_fuga_piyo');
+        $this->assertSame($expected, $actual);
+
+        $actual = Str::toCamel('HogeFugaPiyo');
+        $this->assertSame($expected, $actual);
+    }
+}
