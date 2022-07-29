@@ -29,6 +29,25 @@ class StrTest extends TestCase
     }
 
     /**
+     * パスカルケースへの変換テスト
+     *
+     * @return void
+     */
+    public function testToPascalTest(): void
+    {
+        $expected = 'HogeFugaPiyo';
+
+        $actual = Str::toPascal('hoge-fuga-piyo');
+        $this->assertSame($expected, $actual);
+
+        $actual = Str::toPascal('hoge_fuga_piyo');
+        $this->assertSame($expected, $actual);
+
+        $actual = Str::toPascal('hogeFugaPiyo');
+        $this->assertSame($expected, $actual);
+    }
+
+    /**
      * スネークケースへの変換テスト
      *
      * @return void

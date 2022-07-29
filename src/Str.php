@@ -19,6 +19,18 @@ class Str
     }
 
     /**
+     * 文字列をパスカルケースへ変換する。
+     *
+     * @param string $str
+     *
+     * @return string
+     */
+    public static function toPascal(string $str): string
+    {
+        return str_replace(' ', '', ucwords(preg_replace('/\_|-/', ' ', $str)));
+    }
+
+    /**
      * ケバブケース、キャメルケースをスネークケースへ変換する。
      *
      * @param string $str
