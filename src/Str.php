@@ -39,7 +39,7 @@ class Str
      */
     public static function toSnake(string $str): string
     {
-        return strtolower(str_replace('-', '_', ltrim(preg_replace('/([A-Z])/', '_\0', $str), '_')));
+        return strtolower(preg_replace('/(?<=.)([A-Z])|-/', '_\1', $str));
     }
 
     /**
